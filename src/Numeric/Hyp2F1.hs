@@ -1,5 +1,8 @@
 module Numeric.Hyp2F1 where
 
+import System.IO.Unsafe
+import Foreign.C.Types
+
 hyp2f1 :: Double -> Double -> Double -> Double -> Double
 hyp2f1 a b c z = realToFrac $ unsafePerformIO $
     h2f1 (realToFrac a) (realToFrac b) (realToFrac c) (realToFrac z)

@@ -197,3 +197,34 @@ int mtherr();
 
 /* Variable for error reporting.  See mtherr.c.  */
 extern int merror;
+
+#define NPY_E         2.718281828459045235360287471352662498  /* e */
+#define NPY_LOG2E     1.442695040888963407359924681001892137  /* log_2 e */
+#define NPY_LOG10E    0.434294481903251827651128918916605082  /* log_10 e */
+#define NPY_LOGE2     0.693147180559945309417232121458176568  /* log_e 2 */
+#define NPY_LOGE10    2.302585092994045684017991454684364208  /* log_e 10 */
+#define NPY_PI        3.141592653589793238462643383279502884  /* pi */
+#define NPY_PI_2      1.570796326794896619231321691639751442  /* pi/2 */
+#define NPY_PI_4      0.785398163397448309615660845819875721  /* pi/4 */
+#define NPY_1_PI      0.318309886183790671537767526745028724  /* 1/pi */
+#define NPY_2_PI      0.636619772367581343075535053490057448  /* 2/pi */
+#define NPY_EULER     0.577215664901532860606512090082402431  /* Euler constant */
+#define NPY_SQRT2     1.414213562373095048801688724209698079  /* sqrt(2) */
+#define NPY_SQRT1_2   0.707106781186547524400844362104849039  /* 1/sqrt(2) */
+#define NPY_NAN (sqrt(-1))
+#define NPY_INFINITY 1.79769313486231570815E308 // (1/0)
+#define TOOMANY 7
+#define DOMAIN		1	/* argument domain error */
+#define SING		2	/* argument singularity */
+#define OVERFLOW	3	/* overflow range error */
+#define UNDERFLOW	4	/* underflow range error */
+#define TLOSS		5	/* total loss of precision */
+#define PLOSS		6	/* partial loss of precision */
+#define TOOMANY         7	/* too many iterations */
+#define MAXITER        500
+
+#define EDOM		33
+#define ERANGE		34
+
+#include <assert.h>
+extern double lgam_sgn(double x, int *sign);
